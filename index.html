@@ -3,51 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Craft and Code</title>
+    
+    <title>Webdevelopment & Maatwerk Software | Kontich Craft and Code</title>
+    <meta name="description" content="Ward Kennes van Craft and Code bouwt websites op maat, Craft CMS oplossingen en API-koppelingen in regio Kontich, Antwerpen en Mechelen.">
+    <meta name="keywords" content="Webdevelopment, Craft CMS, Maatwerk software, Kontich, Antwerpen, Web applicaties">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome voor een mooi LinkedIn icoontje -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://consent.cookiefirst.com/sites/craftandcode.be-c68ffa3a-7fb0-48cd-967d-e1a3696562f6/consent.js"></script>
 </head>
-<body class="bg-slate-50 min-h-full flex items-center justify-center p-6 font-sans">
+<body class="bg-slate-50 min-h-full flex flex-col items-center p-4 md:p-12 font-sans text-slate-900">
 
-    <div class="max-w-4xl w-full flex flex-col items-center">
-        
-        <!-- Header: Logo & Info -->
-        <div class="flex flex-col items-center mb-8 text-center">
-            <!-- Het kleine Logo -->
-            <div class="mb-4 transition-transform duration-500 hover:rotate-6">
-                <img src="https://i.imgur.com/9k4m2Og.png" alt="Logo" class="w-16 h-16 object-contain">
+    <div class="max-w-3xl w-full">
+        <div class="bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/60 p-8 md:p-16 border border-slate-100 relative overflow-hidden">
+            
+            <header class="flex flex-col items-center text-center">
+                <div class="mb-6 p-2 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                    <img src="https://i.imgur.com/9k4m2Og.png" alt="Craft and Code Logo" class="w-16 h-16 object-contain">
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+                    Craft and Code
+                </h1>
+                <p class="text-indigo-600 font-bold text-base uppercase tracking-[0.2em] mb-4">
+                    Binnenkort online
+                </p>
+                <h2 class="text-xl text-slate-600 max-w-lg leading-relaxed mb-10">
+                    Expert in <span class="text-slate-900 font-semibold">Webdevelopment</span> & <span class="text-slate-900 font-semibold">Maatwerk Software</span> gevestigd in Antwerpen - Duffel.
+                </h2>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 text-sm">
+                <div class="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <i class="fas fa-check-circle text-indigo-500 mr-3"></i>
+                    <span>Websites op maat & Craft CMS</span>
+                </div>
+                <div class="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <i class="fas fa-check-circle text-indigo-500 mr-3"></i>
+                    <span>Web Applicaties & API koppelingen</span>
+                </div>
+                <div class="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <i class="fas fa-check-circle text-indigo-500 mr-3"></i>
+                    <span>Social Media Campagnes</span>
+                </div>
+                <div class="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+                    <i class="fas fa-check-circle text-indigo-500 mr-3"></i>
+                    <span>Regio Kontich, Antwerpen & Mechelen</span>
+                </div>
             </div>
-            
-            <h1 class="text-3xl font-extrabold text-slate-800 tracking-tight">
-                Ward Kennes
-            </h1>
-            <p class="text-indigo-600 font-medium tracking-wide uppercase text-sm mb-4">
-                Software Developer
-            </p>
-            
-            <!-- LinkedIn Button -->
-            <a href="https://www.linkedin.com/in/wardkennes/?utm_source=website-craft-and-code&utm_medium=link&utm_campaign=general&utm_id=online" 
-               target="_blank" 
-               class="inline-flex items-center px-5 py-2.5 bg-[#0077b5] hover:bg-[#005a87] text-white text-sm font-semibold rounded-lg transition-all shadow-md hover:shadow-lg active:scale-95">
-                <i class="fab fa-linkedin mr-2 text-lg"></i>
-                Connect op LinkedIn
-            </a>
+
+            <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                <a href="https://www.linkedin.com/in/wardkennes/" 
+                   class="flex-1 flex items-center justify-center py-4 bg-[#0077b5] hover:bg-[#005a87] text-white rounded-2xl font-bold transition-all shadow-lg active:scale-[0.97]">
+                    <i class="fab fa-linkedin text-xl mr-3"></i> LinkedIn
+                </a>
+                <a href="mailto:info@craftandcode.be" 
+                   class="flex-1 flex items-center justify-center py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl font-bold transition-all shadow-lg active:scale-[0.97]">
+                    <i class="fas fa-envelope text-lg mr-3"></i> Contacteer ons
+                </a>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden shadow-inner bg-slate-100">
+                <img src="https://i.imgur.com/9k4m2Og.png" alt="Webdevelopment Kontich - Craft and Code" class="w-full opacity-90">
+            </div>
         </div>
 
-        <!-- Image Container (Jouw originele afbeelding) -->
-        <div class="w-full flex justify-center">
-            <img 
-                src="https://i.imgur.com/9k4m2Og.png" 
-                alt="Craft and Code - Ward Kennes"
-                class="w-full md:w-4/5 lg:w-3/4 h-auto rounded-2xl shadow-2xl shadow-slate-300 transition-transform duration-500 hover:scale-[1.01]"
-            >
-        </div>
-
-        <!-- Footer Footer -->
-        <footer class="mt-12 text-slate-400 text-xs uppercase tracking-widest">
-            Craft and Code &copy; 2026
+        <footer class="mt-12 text-center text-slate-400">
+            <p class="text-xs font-bold uppercase tracking-[0.3em] mb-2">Craft and Code &copy; 2026</p>
+            <p class="text-[10px]">Kontich • Antwerpen • Mechelen • Lier</p>
         </footer>
     </div>
 
