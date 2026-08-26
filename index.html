@@ -1,121 +1,519 @@
+
 <!DOCTYPE html>
-<html lang="nl" class="h-full">
+<html lang="nl-BE" class="h-full scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Webdevelopment & Maatwerk Software | Kontich Craft and Code</title>
-    <meta name="description" content="Ward Kennes van Craft and Code bouwt websites op maat, Craft CMS oplossingen en API-koppelingen in regio Kontich, Antwerpen en Mechelen.">
-    <meta name="keywords" content="Webdevelopment, Craft CMS, Maatwerk software, Kontich, Antwerpen, Web applicaties">
 
+    <!-- ===== SEO BASIS ===== -->
+    <title>Webdevelopment &amp; Craft CMS in Kontich | Craft and Code</title>
+    <meta name="description" content="Websites op maat, Craft CMS en API-koppelingen door Craft and Code uit Kontich. Webdeveloper voor bedrijven in regio Antwerpen, Mechelen en Lier.">
+    <link rel="canonical" href="https://craftandcode.be/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="geo.region" content="BE-VAN">
+    <meta name="geo.placename" content="Kontich">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_BE">
+    <meta property="og:site_name" content="Craft and Code">
+    <meta property="og:title" content="Webdevelopment &amp; Craft CMS in Kontich | Craft and Code">
+    <meta property="og:description" content="Websites op maat, Craft CMS en API-koppelingen voor bedrijven in regio Kontich, Antwerpen en Mechelen.">
+    <meta property="og:url" content="https://craftandcode.be/">
+    <meta property="og:image" content="https://i.imgur.com/9k4m2Og.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- ===== CONSENT & TRACKING (ongewijzigd) ===== -->
     <script src="https://consent.cookiefirst.com/sites/craftandcode.be-c68ffa3a-7fb0-48cd-967d-e1a3696562f6/consent.js"></script>
-    
+
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WK66RQQD');</script>
+
+    <!-- ===== GESTRUCTUREERDE DATA ===== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
+          "@type": "ProfessionalService",
           "@id": "https://craftandcode.be/#organization",
           "name": "Craft and Code",
+          "alternateName": "Craft & Code",
           "url": "https://craftandcode.be",
           "logo": "https://i.imgur.com/9k4m2Og.png",
           "image": "https://i.imgur.com/9k4m2Og.png",
-          "description": "Expert in Webdevelopment, Craft CMS & Maatwerk Software gevestigd in Kontich / Antwerpen.",
+          "description": "Craft and Code bouwt websites op maat, Craft CMS oplossingen, web applicaties en API-koppelingen voor bedrijven in Kontich, Antwerpen en Mechelen.",
           "email": "info@craftandcode.be",
+          "founder": {
+            "@type": "Person",
+            "name": "Ward Kennes",
+            "jobTitle": "Webdeveloper",
+            "sameAs": "https://www.linkedin.com/in/wardkennes/"
+          },
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Kontich",
             "addressRegion": "Antwerpen",
+            "postalCode": "2550",
             "addressCountry": "BE"
           },
-          "sameAs": [
-            "https://www.linkedin.com/in/wardkennes/"
-          ]
+          "areaServed": [
+            { "@type": "City", "name": "Kontich" },
+            { "@type": "City", "name": "Antwerpen" },
+            { "@type": "City", "name": "Mechelen" },
+            { "@type": "City", "name": "Lier" },
+            { "@type": "City", "name": "Duffel" }
+          ],
+          "knowsAbout": ["Craft CMS", "Webdevelopment", "Maatwerk software", "API-koppelingen", "Web applicaties"],
+          "sameAs": ["https://www.linkedin.com/in/wardkennes/"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Diensten",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website op maat met Craft CMS", "serviceType": "Webdevelopment" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web applicaties en maatwerk software", "serviceType": "Softwareontwikkeling" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "API-koppelingen en integraties", "serviceType": "Systeemintegratie" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social media campagnes", "serviceType": "Online marketing" } }
+            ]
+          }
         },
         {
           "@type": "WebSite",
           "@id": "https://craftandcode.be/#website",
           "url": "https://craftandcode.be",
           "name": "Craft and Code",
-          "description": "Webdevelopment & Maatwerk Software | Kontich Craft and Code"
+          "inLanguage": "nl-BE",
+          "publisher": { "@id": "https://craftandcode.be/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://craftandcode.be/#webpage",
+          "url": "https://craftandcode.be/",
+          "name": "Webdevelopment & Craft CMS in Kontich | Craft and Code",
+          "isPartOf": { "@id": "https://craftandcode.be/#website" },
+          "about": { "@id": "https://craftandcode.be/#organization" },
+          "inLanguage": "nl-BE"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://craftandcode.be/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Wat kost een website op maat?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "De prijs hangt af van de omvang: het aantal paginatypes, de functionaliteit en de koppelingen met bestaande systemen. Na een kort gesprek krijg je een onderbouwde inschatting, opgesplitst per onderdeel, zodat je ziet waar het budget naartoe gaat."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Waarom Craft CMS en niet WordPress?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Craft CMS vertrekt van jouw contentmodel in plaats van een thema. Je bouwt de velden die je nodig hebt, redacteuren krijgen een beheeromgeving zonder overbodige opties, en je hebt geen stapel plugins nodig om tot maatwerk te komen. Voor sites die blijven groeien is dat op termijn goedkoper in onderhoud."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Werken jullie ook buiten Kontich?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Craft and Code werkt voor klanten in Kontich, Antwerpen, Mechelen, Lier en Duffel. Overleg gebeurt ter plaatse of digitaal, wat het best past bij het project."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kan je een bestaande website of applicatie overnemen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dat kan. We starten met een technische doorlichting van de code, de hosting en het CMS. Daarna weet je of doorbouwen realistisch is of dat herbouwen op termijn minder kost."
+              }
+            }
+          ]
         }
       ]
     }
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: { DEFAULT: '#232C3D', deep: '#1A2231', soft: '#33405A' },
+              leaf: { DEFAULT: '#68ba5c', dark: '#55a349' },
+              sand: '#F5F6F8'
+            },
+            fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'] }
+          }
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        * { transition-duration: 0.01ms !important; }
+      }
+      .nav-link.is-active { color: #68ba5c; }
+    </style>
 </head>
-<body class="bg-slate-50 min-h-full flex flex-col items-center p-4 md:p-12 font-sans text-slate-900">
+
+<body class="min-h-full bg-sand font-sans text-navy antialiased">
 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WK66RQQD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div class="max-w-3xl w-full">
-        <div class="bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/60 p-8 md:p-16 border border-slate-100 relative overflow-hidden">
-            
-            <header class="flex flex-col items-center text-center">
-                <div class="mb-6 p-2 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
-                    <img src="https://i.imgur.com/9k4m2Og.png" alt="Craft and Code Logo" class="w-40 h-40 object-contain">
-                </div>
-                
-                <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
-                    Craft and Code
-                </h1>
-                <p class="font-bold text-[#68ba5c] text-base uppercase tracking-[0.2em] mb-4">
-                    Binnenkort online
-                </p>
-                <h2 class="text-xl text-slate-600 max-w-lg leading-relaxed mb-10">
-                    Expert in <span class="text-slate-900 font-semibold">Webdevelopment</span> & <span class="text-slate-900 font-semibold">Maatwerk Software</span> gevestigd in Antwerpen - Duffel.
-                </h2>
-            </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 text-sm">
-                <div class="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <i class="fas fa-check-circle text-[#68ba5c] mr-3"></i>
-                    <span>Websites op maat & Craft CMS</span>
-                </div>
-                <div class="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <i class="fas fa-check-circle text-[#68ba5c] mr-3"></i>
-                    <span>Web Applicaties & API koppelingen</span>
-                </div>
-                <div class="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <i class="fas fa-check-circle text-[#68ba5c] mr-3"></i>
-                    <span>Social Media Campagnes</span>
-                </div>
-                <div class="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-                    <i class="fas fa-check-circle text-[#68ba5c] mr-3"></i>
-                    <span>Regio Kontich, Antwerpen & Mechelen</span>
-                </div>
-            </div>
+  <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-navy focus:px-5 focus:py-3 focus:text-white">
+    Naar de inhoud
+  </a>
 
-            <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                <a href="https://www.linkedin.com/in/wardkennes/" 
-                   class="flex-1 flex items-center justify-center py-4 bg-[#0077b5] hover:bg-[#005a87] text-white rounded-2xl font-bold transition-all shadow-lg active:scale-[0.97]">
-                    <i class="fab fa-linkedin text-xl mr-3"></i> LinkedIn
-                </a>
-                <a href="mailto:info@craftandcode.be" 
-                   class="flex-1 flex items-center justify-center py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl font-bold transition-all shadow-lg active:scale-[0.97]">
-                    <i class="fas fa-envelope text-lg mr-3"></i> Contacteer ons
-                </a>
-            </div>
+  <!-- ============ HEADER ============ -->
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6">
+    <div class="mx-auto max-w-6xl">
+      <nav aria-label="Hoofdnavigatie" class="flex items-center justify-between gap-4 rounded-full bg-white/95 px-5 py-3 shadow-lg shadow-navy/5 ring-1 ring-navy/5 backdrop-blur sm:px-6">
 
-            <div class="rounded-2xl overflow-hidden shadow-inner bg-slate-100">
-                <img src="https://i.imgur.com/9k4m2Og.png" alt="Webdevelopment Kontich - Craft and Code" class="w-full opacity-90">
-            </div>
+        <a href="#home" class="flex items-baseline gap-1.5 text-lg font-semibold tracking-tight sm:text-xl" aria-label="Craft and Code, naar boven">
+          <span>craft</span><span class="text-leaf">&amp;</span><span>code</span>
+        </a>
+
+        <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <li><a href="#home" class="nav-link transition hover:text-leaf">Home</a></li>
+          <li><a href="#diensten" class="nav-link transition hover:text-leaf">Diensten</a></li>
+          <li><a href="#contact" class="nav-link transition hover:text-leaf">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-2">
+          <a href="#contact" class="hidden rounded-full bg-navy px-5 py-2.5 text-sm font-medium text-white transition hover:bg-navy-soft sm:inline-flex">
+            Contacteer ons
+          </a>
+
+          <button id="menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-menu"
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full text-navy ring-1 ring-navy/10 transition hover:bg-sand md:hidden">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" class="mt-2 hidden rounded-3xl bg-white p-4 shadow-lg shadow-navy/5 ring-1 ring-navy/5 md:hidden">
+        <ul class="flex flex-col text-sm font-medium">
+          <li><a href="#home" class="nav-link block rounded-2xl px-4 py-3 transition hover:bg-sand">Home</a></li>
+          <li><a href="#diensten" class="nav-link block rounded-2xl px-4 py-3 transition hover:bg-sand">Diensten</a></li>
+          <li><a href="#contact" class="nav-link block rounded-2xl px-4 py-3 transition hover:bg-sand">Contact</a></li>
+        </ul>
+        <a href="#contact" class="mt-2 block rounded-full bg-navy px-5 py-3 text-center text-sm font-medium text-white transition hover:bg-navy-soft">
+          Contacteer ons
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO / H1 ============ -->
+    <section id="home" class="scroll-mt-32 px-4 pb-20 pt-32 sm:px-6 sm:pt-44">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">
+          Webdeveloper in Kontich
+        </p>
+
+        <h1 class="mt-5 text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl">
+          Websites op maat en maatwerk software in Kontich en regio Antwerpen
+        </h1>
+
+        <p class="mt-6 text-lg leading-relaxed text-navy/70">
+          Craft and Code is het bureau van <strong class="font-semibold text-navy">Ward Kennes</strong>. We bouwen websites met
+          <strong class="font-semibold text-navy">Craft CMS</strong>, web applicaties en
+          <strong class="font-semibold text-navy">API-koppelingen</strong> voor bedrijven in Kontich, Antwerpen, Mechelen, Lier en Duffel.
+        </p>
+
+        <p class="mt-4 leading-relaxed text-navy/70">
+          Geen thema dat je later tegenwerkt, maar een site die je zelf beheert en die meegroeit met je bedrijf.
+        </p>
+
+        <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="#contact"
+             class="inline-flex items-center justify-center rounded-full bg-navy px-7 py-4 text-sm font-semibold text-white transition hover:bg-navy-soft">
+            Vraag een inschatting
+          </a>
+          <a href="#diensten"
+             class="inline-flex items-center justify-center rounded-full bg-white px-7 py-4 text-sm font-semibold text-navy ring-1 ring-navy/10 transition hover:bg-white/70">
+            Bekijk de diensten
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIENSTEN / H2 ============ -->
+    <section id="diensten" class="scroll-mt-32 px-4 py-16 sm:px-6" aria-labelledby="diensten-titel">
+      <div class="mx-auto max-w-6xl">
+        <div class="mx-auto mb-10 max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">Diensten</p>
+          <h2 id="diensten-titel" class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+            Webdevelopment, Craft CMS en API-koppelingen
+          </h2>
+          <p class="mt-4 leading-relaxed text-navy/70">
+            Vier diensten, allemaal vanuit dezelfde vraag: wat moet dit systeem over drie jaar nog kunnen?
+          </p>
         </div>
 
-        <footer class="mt-12 text-center text-slate-400">
-            <p class="text-xs font-bold uppercase tracking-[0.3em] mb-2">Craft and Code &copy; 2026</p>
-            <p class="text-[10px]">Kontich • Antwerpen • Mechelen • Lier</p>
-        </footer>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <article class="rounded-3xl bg-white p-8 ring-1 ring-navy/5">
+            <svg class="mb-4 h-7 w-7 text-leaf" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-3 3 3 3m8-6l3 3-3 3M13.5 6l-3 12"/>
+            </svg>
+            <h3 class="text-lg font-semibold">Website op maat met Craft CMS</h3>
+            <p class="mt-2 leading-relaxed text-navy/70">
+              Een contentmodel dat past bij jouw producten en diensten, een beheeromgeving zonder overbodige opties, en snelle laadtijden als uitgangspunt.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-8 ring-1 ring-navy/5">
+            <svg class="mb-4 h-7 w-7 text-leaf" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zm0 3h16M7.5 6.5h.01M10 6.5h.01"/>
+            </svg>
+            <h3 class="text-lg font-semibold">Web applicaties en maatwerk software</h3>
+            <p class="mt-2 leading-relaxed text-navy/70">
+              Portalen, tools en interne applicaties voor processen die vandaag in Excel of in mailboxen blijven hangen.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-8 ring-1 ring-navy/5">
+            <svg class="mb-4 h-7 w-7 text-leaf" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6.5l4 4M9 21H5a2 2 0 0 1-2-2v-4l6-6 6 6-6 6zM14 4.5l5.5 5.5M12.5 6l5.5 5.5 2.3-2.3a3.9 3.9 0 0 0-5.5-5.5L12.5 6z"/>
+            </svg>
+            <h3 class="text-lg font-semibold">API-koppelingen en integraties</h3>
+            <p class="mt-2 leading-relaxed text-navy/70">
+              Je website koppelen aan je ERP, CRM of voorraadsysteem, zodat data maar op één plek onderhouden wordt.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-8 ring-1 ring-navy/5">
+            <svg class="mb-4 h-7 w-7 text-leaf" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 10v4a1 1 0 0 0 1 1h3l5 4V5L8 9H5a1 1 0 0 0-1 1zm13.5-2a5 5 0 0 1 0 8"/>
+            </svg>
+            <h3 class="text-lg font-semibold">Social media campagnes</h3>
+            <p class="mt-2 leading-relaxed text-navy/70">
+              Campagnes opzetten en opvolgen, met tracking die effectief meet welke aanvragen binnenkomen.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WERKGEBIED / H2 ============ -->
+    <section id="werkgebied" class="scroll-mt-32 px-4 py-16 sm:px-6" aria-labelledby="werkgebied-titel">
+      <div class="mx-auto max-w-6xl">
+        <div class="rounded-[2rem] bg-white p-8 ring-1 ring-navy/5 sm:p-12">
+          <div class="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">Werkgebied</p>
+              <h2 id="werkgebied-titel" class="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">
+                Webdeveloper in Kontich, Antwerpen, Mechelen, Lier en Duffel
+              </h2>
+            </div>
+            <div>
+              <p class="leading-relaxed text-navy/70">
+                Craft and Code werkt vanuit Kontich, op de as tussen Antwerpen en Mechelen. Overleg ter plaatse blijft
+                daardoor realistisch: even samenzitten bij de start van een project, en daarna kort schakelen wanneer het
+                nodig is. Werk je verder weg, dan verloopt de samenwerking digitaal en verandert er inhoudelijk niets aan de aanpak.
+              </p>
+              <ul class="mt-6 flex flex-wrap gap-2 text-sm font-medium">
+                <li class="rounded-full bg-sand px-4 py-2 ring-1 ring-navy/5">Kontich</li>
+                <li class="rounded-full bg-sand px-4 py-2 ring-1 ring-navy/5">Antwerpen</li>
+                <li class="rounded-full bg-sand px-4 py-2 ring-1 ring-navy/5">Mechelen</li>
+                <li class="rounded-full bg-sand px-4 py-2 ring-1 ring-navy/5">Lier</li>
+                <li class="rounded-full bg-sand px-4 py-2 ring-1 ring-navy/5">Duffel</li>
+                <li class="rounded-full bg-sand px-4 py-2 ring-1 ring-navy/5">Edegem</li>
+                <li class="rounded-full bg-sand px-4 py-2 ring-1 ring-navy/5">Boechout</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ / H2 ============ -->
+    <section id="faq" class="scroll-mt-32 px-4 py-16 sm:px-6" aria-labelledby="faq-titel">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-8 text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">Veelgestelde vragen</p>
+          <h2 id="faq-titel" class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+            Vragen over een website op maat
+          </h2>
+        </div>
+
+        <div class="space-y-3">
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-navy/5">
+            <h3 class="text-lg font-semibold">Wat kost een website op maat?</h3>
+            <p class="mt-2 leading-relaxed text-navy/70">
+              De prijs hangt af van de omvang: het aantal paginatypes, de functionaliteit en de koppelingen met bestaande
+              systemen. Na een kort gesprek krijg je een onderbouwde inschatting, opgesplitst per onderdeel, zodat je ziet
+              waar het budget naartoe gaat.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-navy/5">
+            <h3 class="text-lg font-semibold">Waarom Craft CMS en niet WordPress?</h3>
+            <p class="mt-2 leading-relaxed text-navy/70">
+              Craft CMS vertrekt van jouw contentmodel in plaats van een thema. Je bouwt de velden die je nodig hebt,
+              redacteuren krijgen een beheeromgeving zonder overbodige opties, en je hebt geen stapel plugins nodig om tot
+              maatwerk te komen. Voor sites die blijven groeien is dat op termijn goedkoper in onderhoud.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-navy/5">
+            <h3 class="text-lg font-semibold">Werken jullie ook buiten Kontich?</h3>
+            <p class="mt-2 leading-relaxed text-navy/70">
+              Ja. Craft and Code werkt voor klanten in Kontich, Antwerpen, Mechelen, Lier en Duffel. Overleg gebeurt ter
+              plaatse of digitaal, wat het best past bij het project.
+            </p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-7 ring-1 ring-navy/5">
+            <h3 class="text-lg font-semibold">Kan je een bestaande website of applicatie overnemen?</h3>
+            <p class="mt-2 leading-relaxed text-navy/70">
+              Dat kan. We starten met een technische doorlichting van de code, de hosting en het CMS. Daarna weet je of
+              doorbouwen realistisch is of dat herbouwen op termijn minder kost.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ CONTACT + FOOTER ============ -->
+  <section id="contact" class="scroll-mt-32 bg-navy px-4 py-16 sm:px-6 sm:py-20" aria-labelledby="contact-titel">
+    <div class="mx-auto max-w-6xl">
+
+      <div class="mb-10 grid gap-8 md:grid-cols-2 md:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">Contact</p>
+          <h2 id="contact-titel" class="mt-3 text-2xl font-semibold leading-snug text-white sm:text-3xl">
+            Een webdeveloper zoeken in regio Antwerpen?
+          </h2>
+          <p class="mt-4 max-w-md leading-relaxed text-white/70">
+            Stuur een mail met wat je wil bouwen. Je krijgt een eerlijke inschatting terug, geen offerte van drie pagina's.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3 md:justify-end">
+          <a href="mailto:info@craftandcode.be"
+             class="inline-flex items-center rounded-full bg-leaf px-6 py-3 text-sm font-semibold text-navy-deep transition hover:bg-leaf-dark">
+            <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.6 5.1a2.5 2.5 0 0 0 2.8 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/>
+            </svg>
+            info@craftandcode.be
+          </a>
+          <a href="https://www.linkedin.com/in/wardkennes/" target="_blank" rel="noopener"
+             class="inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">
+            <svg class="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+            Ward op LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <footer class="rounded-[2rem] bg-white p-8 sm:p-12">
+        <div class="grid gap-10 md:grid-cols-4">
+
+          <div>
+            <img src="https://i.imgur.com/9k4m2Og.png"
+                 alt="Craft and Code, webdeveloper en Craft CMS specialist in Kontich"
+                 width="112" height="112" loading="lazy" class="h-28 w-28 object-contain">
+            <p class="mt-4 max-w-xs text-sm leading-relaxed text-navy/60">
+              Websites op maat, Craft CMS en maatwerk software door Ward Kennes. Actief in regio Kontich, Antwerpen, Mechelen, Lier en Duffel.
+            </p>
+          </div>
+
+          <nav aria-label="Footernavigatie">
+            <h3 class="text-sm font-semibold uppercase tracking-wider">Navigatie</h3>
+            <ul class="mt-4 space-y-2.5 text-sm text-navy/70">
+              <li><a href="#home" class="transition hover:text-leaf">Home</a></li>
+              <li><a href="#diensten" class="transition hover:text-leaf">Diensten</a></li>
+              <li><a href="#werkgebied" class="transition hover:text-leaf">Werkgebied</a></li>
+              <li><a href="#faq" class="transition hover:text-leaf">Veelgestelde vragen</a></li>
+              <li><a href="#contact" class="transition hover:text-leaf">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wider">Diensten</h3>
+            <ul class="mt-4 space-y-2.5 text-sm text-navy/70">
+              <li><a href="#diensten" class="transition hover:text-leaf">Website op maat</a></li>
+              <li><a href="#diensten" class="transition hover:text-leaf">Craft CMS</a></li>
+              <li><a href="#diensten" class="transition hover:text-leaf">Web applicaties</a></li>
+              <li><a href="#diensten" class="transition hover:text-leaf">API-koppelingen</a></li>
+              <li><a href="#diensten" class="transition hover:text-leaf">Social media campagnes</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wider">Craft and Code</h3>
+            <address class="mt-4 space-y-2.5 text-sm not-italic text-navy/70">
+              <p>Kontich, provincie Antwerpen, België</p>
+              <p><a href="mailto:info@craftandcode.be" class="transition hover:text-leaf">info@craftandcode.be</a></p>
+              <p><a href="https://www.linkedin.com/in/wardkennes/" target="_blank" rel="noopener" class="transition hover:text-leaf">LinkedIn</a></p>
+            </address>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col gap-3 border-t border-navy/10 pt-6 text-sm text-navy/50 sm:flex-row sm:items-center sm:justify-between">
+          <p>Craft and Code &copy; <span id="year">2026</span></p>
+          <p class="text-xs">
+            <button type="button" onclick="if(window.CookieFirst){window.CookieFirst.openPanel();}" class="transition hover:text-leaf">
+              Cookievoorkeuren
+            </button>
+            <span class="mx-2">|</span>
+            Kontich &bull; Antwerpen &bull; Mechelen &bull; Lier &bull; Duffel
+          </p>
+        </div>
+      </footer>
     </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      const open = !menu.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Menu openen');
+      });
+    });
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => {
+          link.classList.toggle('is-active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
