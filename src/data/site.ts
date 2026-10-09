@@ -55,10 +55,10 @@ export const services = [
 // Cities shown as chips in the "Werkgebied" section.
 // A chip becomes a link automatically once a published region page exists
 // with a matching `city` in src/content/regions/.
-export const workArea = ['Duffel', 'Antwerpen', 'Mechelen', 'Lier', 'Rumst', 'Edegem', 'Boechout'];
+export const workArea = ['Duffel', 'Kontich', 'Lint', 'Lier', 'Mechelen', 'Antwerpen', 'Rumst', 'Edegem', 'Boechout'];
 
 // Cities listed as areaServed in the organization structured data.
-export const areaServed = ['Duffel', 'Antwerpen', 'Mechelen', 'Lier', 'Kontich'];
+export const areaServed = ['Duffel', 'Antwerpen', 'Mechelen', 'Lier', 'Kontich', 'Lint'];
 
 export const faq = [
   {
