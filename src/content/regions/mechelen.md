@@ -10,7 +10,7 @@ draft: false
 
 Mechelen heeft een gevarieerd bedrijfsleven: handelszaken en horeca in het centrum, dienstverleners en kantoren rond de ring, en productie- en logistieke bedrijven op de bedrijventerreinen langs de E19. Die bedrijven hebben elk een andere website nodig. Een winkel wil zelf snel aanbod en openingsuren aanpassen, een dienstverlener wil aanvragen binnenkrijgen, een producent wil dat productinformatie uit het ERP automatisch online staat.
 
-Daarom vertrekken we niet van een thema, maar van wat jouw bedrijf moet tonen en beheren. Met [Craft CMS](/#diensten) bouwen we een contentmodel dat past bij jouw producten en diensten, met een beheeromgeving zonder overbodige opties.
+Daarom vertrekken we niet van een thema, maar van wat jouw bedrijf moet tonen en beheren. Met [Craft CMS](/) bouwen we een contentmodel dat past bij jouw producten en diensten, met een beheeromgeving zonder overbodige opties.
 
 ## Wat we voor bedrijven in Mechelen bouwen
 
@@ -50,4 +50,4 @@ Heb je al een website of applicatie die je wil laten overnemen of verbeteren? Da
 
 ## Een webdeveloper in Mechelen nodig?
 
-Stuur een mail met wat je wil bouwen. Je krijgt een eerlijke inschatting terug, opgesplitst per onderdeel, zodat je ziet waar het budget naartoe gaat. [Neem contact op](#contact).s
+Stuur een mail met wat je wil bouwen. Je krijgt een eerlijke inschatting terug, opgesplitst per onderdeel, zodat je ziet waar het budget naartoe gaat. [Neem contact op](#contact).
