@@ -1,0 +1,117 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  ogDescription?: string;
+  geoPlacename?: string;
+  /** Nodes for the JSON-LD @graph */
+  schema?: Record<string, unknown>[];
+}
+
+const { title, description, ogDescription = description, geoPlacename = 'Duffel', schema = [] } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const jsonLd = { '@context': 'https://schema.org', '@graph': schema };
+---
+<!DOCTYPE html>
+<html lang="nl-BE" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="geo.region" content="BE-VAN">
+  <meta name="geo.placename" content={geoPlacename}>
+  <link rel="sitemap" href="/sitemap-index.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_BE">
+  <meta property="og:site_name" content={site.name}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={ogDescription}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:image" content={site.logo}>
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Consent & tracking (unchanged) -->
+  <script is:inline src={site.cookieFirstSrc}></script>
+  <script is:inline define:vars={{ gtmId: site.gtmId }}>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer',gtmId);
+  </script>
+
+  <!-- Structured data -->
+  {schema.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-full bg-sand font-sans text-navy antialiased">
+  <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${site.gtmId}`}
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-navy focus:px-5 focus:py-3 focus:text-white">
+    Naar de inhoud
+  </a>
+
+  <Header />
+
+  <main>
+    <slot />
+  </main>
+
+  <Footer />
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = !menu.classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+      });
+
+      menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menu.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Menu openen');
+        });
+      });
+    }
+
+    // Highlight the nav item of the section currently in view (homepage only).
+    const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((link) => {
+          link.classList.toggle('is-active', link.hash === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    if (location.pathname === '/') {
+      document.querySelectorAll('section[id]').forEach((section) => observer.observe(section));
+    }
+
+    const year = document.getElementById('year');
+    if (year) year.textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
