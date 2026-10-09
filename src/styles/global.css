@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #232C3D;
+  --color-navy-deep: #1A2231;
+  --color-navy-soft: #33405A;
+  --color-leaf: #68ba5c;
+  --color-leaf-dark: #55a349;
+  --color-sand: #F5F6F8;
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  /* Tailwind v4 no longer sets a pointer cursor on buttons */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0.01ms !important; }
+}
+
+.nav-link.is-active { color: var(--color-leaf); }

@@ -1,0 +1,98 @@
+---
+import { site, services } from '../data/site';
+
+const footerNav = [
+  { href: '/#home', label: 'Home' },
+  { href: '/#diensten', label: 'Diensten' },
+  { href: '/#werkgebied', label: 'Werkgebied' },
+  { href: '/#faq', label: 'Veelgestelde vragen' },
+  { href: '/#contact', label: 'Contact' },
+];
+---
+<section id="contact" class="scroll-mt-32 bg-navy px-4 py-16 sm:px-6 sm:py-20" aria-labelledby="contact-titel">
+  <div class="mx-auto max-w-6xl">
+
+    <div class="mb-10 grid gap-8 md:grid-cols-2 md:items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">Contact</p>
+        <h2 id="contact-titel" class="mt-3 text-2xl font-semibold leading-snug text-white sm:text-3xl">
+          Een webdeveloper zoeken in regio Antwerpen?
+        </h2>
+        <p class="mt-4 max-w-md leading-relaxed text-white/70">
+          Stuur een mail met wat je wil bouwen. Je krijgt een eerlijke inschatting terug, geen offerte van drie pagina's.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3 md:justify-end">
+        <a href={`mailto:${site.email}`}
+           class="inline-flex items-center rounded-full bg-leaf px-6 py-3 text-sm font-semibold text-navy-deep transition hover:bg-leaf-dark">
+          <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.6 5.1a2.5 2.5 0 0 0 2.8 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/>
+          </svg>
+          {site.email}
+        </a>
+        <a href={site.linkedin} target="_blank" rel="noopener"
+           class="inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/10">
+          <svg class="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          Ward op LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <footer class="rounded-[2rem] bg-white p-8 sm:p-12">
+      <div class="grid gap-10 md:grid-cols-4">
+
+        <div>
+          <img src={site.logo}
+               alt="Craft and Code, webdeveloper en Craft CMS specialist in Duffel"
+               width="112" height="112" loading="lazy" class="h-28 w-28 object-contain">
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-navy/60">
+            Websites op maat, Craft CMS en maatwerk software door Ward Kennes. Actief in regio Duffel, Antwerpen, Mechelen, Lier en Rumst
+          </p>
+        </div>
+
+        <nav aria-label="Footernavigatie">
+          <h3 class="text-sm font-semibold uppercase tracking-wider">Navigatie</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-navy/70">
+            {footerNav.map((item) => (
+              <li><a href={item.href} class="transition hover:text-leaf">{item.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider">Diensten</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-navy/70">
+            <li><a href="/#diensten" class="transition hover:text-leaf">Website op maat</a></li>
+            <li><a href="/#diensten" class="transition hover:text-leaf">Craft CMS</a></li>
+            {services.slice(1).map((s) => (
+              <li><a href="/#diensten" class="transition hover:text-leaf">{s.short}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wider">Craft and Code</h3>
+          <address class="mt-4 space-y-2.5 text-sm not-italic text-navy/70">
+            <p>Duffel, provincie Antwerpen, België</p>
+            <p><a href={`mailto:${site.email}`} class="transition hover:text-leaf">{site.email}</a></p>
+            <p><a href={site.instagram} target="_blank" rel="noopener" class="transition hover:text-leaf">Instagram</a></p>
+            <p><a href={site.linkedin} target="_blank" rel="noopener" class="transition hover:text-leaf">LinkedIn</a></p>
+          </address>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col gap-3 border-t border-navy/10 pt-6 text-sm text-navy/50 sm:flex-row sm:items-center sm:justify-between">
+        <p>Craft and Code &copy; <span id="year">{new Date().getFullYear()}</span></p>
+        <p class="text-xs">
+          <button type="button" onclick="if(window.CookieFirst){window.CookieFirst.openPanel();}" class="transition hover:text-leaf">
+            Cookievoorkeuren
+          </button>
+          <span class="mx-2">|</span>
+          Duffel &bull; Antwerpen &bull; Mechelen &bull; Lier &bull; Rumst
+        </p>
+      </div>
+    </footer>
+  </div>
+</section>
