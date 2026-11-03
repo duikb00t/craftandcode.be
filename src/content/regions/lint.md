@@ -1,8 +1,8 @@
 ---
 city: Lint
-title: Webdeveloper Lint | Websites op maat | Craft and Code
-description: Website op maat voor je zaak in Lint? Craft and Code uit Duffel bouwt snelle sites met Craft CMS die je zelf beheert, met een eerlijke inschatting vooraf.
-intro: Craft and Code bouwt websites op maat voor zelfstandigen en bedrijven in Lint. Vanuit het naburige Duffel ben je snel geholpen, met een aanpak die past bij de schaal van je zaak.
+title: Webdesign Lint | Websites op maat voor je zaak | Craft and Code
+description: Webdesign in Lint? Craft and Code uit Duffel bouwt snelle websites op maat die je zelf beheert, met een eerlijke inschatting vooraf.
+intro: Craft and Code ontwerpt en bouwt websites op maat voor zelfstandigen en bedrijven in Lint. Vanuit het naburige Duffel ben je snel geholpen, met een aanpak die past bij de schaal van je zaak.
 draft: false
 ---
 
