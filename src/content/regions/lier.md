@@ -1,6 +1,6 @@
 ---
 city: Lier
-title: Website laten maken in Lier | Webdesign op maat | Craft and Code
+title: Website laten maken in Lier | Webdesign | Craft and Code
 description: Website laten maken in Lier? Craft and Code ontwerpt en bouwt websites op maat voor handelszaken, horeca en bedrijven, met overleg bij jou in Lier.
 intro: Craft and Code ontwerpt en bouwt websites op maat voor handelszaken, horeca en bedrijven in Lier. Vanuit Duffel zitten we op een korte rit, dus samenzitten bij jou in de zaak of op kantoor is altijd mogelijk.
 draft: false
