@@ -1,8 +1,8 @@
 ---
 city: Mechelen
-title: Webdeveloper Mechelen | Websites op maat | Craft and Code
-description: Website, web applicatie of API-koppeling nodig in Mechelen? Craft and Code uit Duffel bouwt het op maat met Craft CMS, met overleg ter plaatse.
-intro: Craft and Code bouwt websites op maat, web applicaties en API-koppelingen voor bedrijven in Mechelen. Vanuit Duffel zitten we op een korte rit van de stad, dus samenzitten bij de start van je project is geen probleem.
+title: Website laten maken in Mechelen | Webdesign | Craft and Code
+description: Website laten maken in Mechelen? Craft and Code bouwt websites op maat, web applicaties en koppelingen met je ERP of CRM, met overleg ter plaatse.
+intro: Craft and Code ontwerpt en bouwt websites op maat, web applicaties en koppelingen voor bedrijven in Mechelen. Vanuit Duffel zitten we op een korte rit, dus samenzitten bij de start van je project is geen probleem.
 draft: false
 ---
 
