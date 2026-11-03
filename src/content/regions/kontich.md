@@ -1,8 +1,8 @@
 ---
 city: Kontich
-title: Webdeveloper Kontich | Websites en koppelingen | Craft and Code
-description: Website, web applicatie of koppeling met je ERP of CRM nodig in Kontich? Craft and Code bouwt het op maat, vlak bij je vanuit Duffel.
-intro: Craft and Code bouwt websites, web applicaties en API-koppelingen voor bedrijven in Kontich. Vanuit het naburige Duffel komen we makkelijk langs voor overleg.
+title: Webdesign Kontich | Websites en koppelingen | Craft and Code
+description: Webdesign en website laten maken in Kontich? Craft and Code bouwt websites op maat, gekoppeld aan je ERP of CRM, vanuit het naburige Duffel.
+intro: Craft and Code ontwerpt en bouwt websites op maat voor bedrijven in Kontich, met koppelingen naar je ERP, CRM of voorraadbeheer waar dat nodig is. Vanuit het naburige Duffel komen we makkelijk langs voor overleg.
 draft: false
 ---
 
