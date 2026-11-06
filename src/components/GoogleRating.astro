@@ -1,0 +1,25 @@
+---
+import { site } from '../data/site';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+const { rating, reviewCount, profileUrl } = site.google;
+---
+<a href={profileUrl} target="_blank" rel="noopener"
+   class:list={['inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm ring-1 ring-navy/10 transition hover:ring-leaf/40', className]}
+   aria-label={`${rating} op 5 sterren op Google, ${reviewCount} reviews. Bekijk de reviews op Google.`}>
+  <span class="flex text-[#FBBC04]" aria-hidden="true">
+    {Array.from({ length: 5 }, () => (
+      <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/>
+      </svg>
+    ))}
+  </span>
+  <span aria-hidden="true">
+    <strong class="font-semibold">{rating}/5</strong> op Google
+    <span class="text-navy/60">({reviewCount} reviews)</span>
+  </span>
+</a>

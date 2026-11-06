@@ -16,6 +16,15 @@ export const site = {
   contactFormEndpoint: 'https://formspree.io/f/mkjjelbl',
   cookieFirstSrc:
     'https://consent.cookiefirst.com/sites/craftandcode.be-c68ffa3a-7fb0-48cd-967d-e1a3696562f6/consent.js',
+  // Google Business Profile. Rating and count are not fetched live: update them by hand.
+  google: {
+    profileUrl: 'https://maps.app.goo.gl/y359GxNteKb8Do1HA',
+    // Stable CID link, used in structured data.
+    mapsUrl: 'https://maps.google.com/?cid=12708925692475272115',
+    rating: 5,
+    reviewCount: 5,
+  },
+  geo: { latitude: 51.0979488, longitude: 4.553275 },
   address: {
     locality: 'Duffel',
     region: 'Antwerpen',

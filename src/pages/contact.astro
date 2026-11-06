@@ -1,11 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
+import GoogleRating from '../components/GoogleRating.astro';
 import { site, services } from '../data/site';
 import { organizationSchema, websiteSchema, websiteId, organizationId } from '../data/schema';
 
 const title = 'Contact webdeveloper in Duffel | Craft and Code';
 const description =
-  'Contacteer Craft and Code, webdeveloper in Duffel, voor een website op maat, Craft CMS, web applicaties of API-koppelingen. Geen verkooppraat, wel een eerlijke inschatting.';
+  'Contacteer Craft and Code, webdeveloper in Duffel, voor een website op maat met Craft CMS, een web applicatie of API-koppeling. Eerlijke inschatting, geen verkooppraat.';
 const url = new URL(Astro.url.pathname, Astro.site).href;
 
 const schema = [
@@ -53,6 +54,8 @@ const labelClass = 'block text-sm font-semibold';
       <p class="mt-4 leading-relaxed text-navy/70">
         Je krijgt een eerlijke inschatting terug, ook als het antwoord is dat je iets beter niet laat bouwen.
       </p>
+
+      <GoogleRating class="mt-8" />
     </div>
   </section>
 

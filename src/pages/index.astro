@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import GoogleRating from '../components/GoogleRating.astro';
 import { site, services, workArea, faq } from '../data/site';
 import { organizationSchema, websiteSchema, websiteId, organizationId } from '../data/schema';
 
@@ -72,6 +73,8 @@ const schema = [
           Bekijk de diensten
         </a>
       </div>
+
+      <GoogleRating class="mt-8" />
     </div>
   </section>
 

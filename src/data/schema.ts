@@ -13,7 +13,7 @@ export function organizationSchema() {
     logo: site.logo,
     image: site.logo,
     description:
-      'Craft and Code bouwt websites op maat, Craft CMS oplossingen, web applicaties en API-koppelingen voor bedrijven in Kontich, Antwerpen en Mechelen.',
+      'Craft and Code bouwt vanuit Duffel websites op maat, Craft CMS oplossingen, web applicaties en API-koppelingen voor bedrijven in regio Antwerpen en Mechelen.',
     email: site.email,
     founder: {
       '@type': 'Person',
@@ -28,9 +28,11 @@ export function organizationSchema() {
       postalCode: site.address.postalCode,
       addressCountry: site.address.country,
     },
+    geo: { '@type': 'GeoCoordinates', latitude: site.geo.latitude, longitude: site.geo.longitude },
+    hasMap: site.google.mapsUrl,
     areaServed: areaServed.map((name) => ({ '@type': 'City', name })),
     knowsAbout: ['Craft CMS', 'Webdevelopment', 'Maatwerk software', 'API-koppelingen', 'Web applicaties'],
-    sameAs: [site.linkedin],
+    sameAs: [site.linkedin, site.instagram, site.google.mapsUrl],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Diensten',
