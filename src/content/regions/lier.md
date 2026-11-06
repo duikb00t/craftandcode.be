@@ -38,4 +38,4 @@ Bij de start van een project zitten we graag samen, bij jou in de zaak of op kan
 
 ## Een webdeveloper in Lier nodig?
 
-Stuur een mail met wat je wil bouwen. Je krijgt een eerlijke inschatting terug, opgesplitst per onderdeel. [Neem contact op](#contact).
+Stuur een mail met wat je wil bouwen. Je krijgt een eerlijke inschatting terug, opgesplitst per onderdeel. [Neem contact op](/contact/).

@@ -6,8 +6,10 @@ const footerNav = [
   { href: '/#diensten', label: 'Diensten' },
   { href: '/#werkgebied', label: 'Werkgebied' },
   { href: '/#faq', label: 'Veelgestelde vragen' },
-  { href: '/#contact', label: 'Contact' },
+  { href: '/contact/', label: 'Contact' },
 ];
+
+const onContactPage = Astro.url.pathname === '/contact/';
 ---
 <section id="contact" class="scroll-mt-32 bg-navy px-4 py-16 sm:px-6 sm:py-20" aria-labelledby="contact-titel">
   <div class="mx-auto max-w-6xl">
@@ -19,10 +21,16 @@ const footerNav = [
           Een webdeveloper zoeken in regio Antwerpen?
         </h2>
         <p class="mt-4 max-w-md leading-relaxed text-white/70">
-          Stuur een mail met wat je wil bouwen. Je krijgt een eerlijke inschatting terug, geen offerte van drie pagina's.
+          Laat via het formulier of per mail weten wat je wil bouwen. Je krijgt een eerlijke inschatting terug, geen offerte van drie pagina's.
         </p>
       </div>
       <div class="flex flex-wrap gap-3 md:justify-end">
+        {!onContactPage && (
+          <a href="/contact/"
+             class="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-navy transition hover:bg-sand">
+            Naar het contactformulier
+          </a>
+        )}
         <a href={`mailto:${site.email}`}
            class="inline-flex items-center rounded-full bg-leaf px-6 py-3 text-sm font-semibold text-navy-deep transition hover:bg-leaf-dark">
           <svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
@@ -50,6 +58,10 @@ const footerNav = [
           <p class="mt-4 max-w-xs text-sm leading-relaxed text-navy/60">
             Websites op maat, Craft CMS en maatwerk software door Ward Kennes. Actief in regio Duffel, Antwerpen, Mechelen, Lier en Rumst
           </p>
+          <!-- Red logo on a light background, per https://craftcms.com/brand-resources -->
+          <p class="mt-6 text-xs font-semibold uppercase tracking-wider text-navy/50">Wij bouwen met</p>
+          <img src="/logo-craft-cms.svg" alt="Craft CMS" width="220" height="55" loading="lazy"
+               class="mt-3 h-6 w-auto">
         </div>
 
         <nav aria-label="Footernavigatie">

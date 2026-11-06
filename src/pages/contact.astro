@@ -1,0 +1,204 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, services } from '../data/site';
+import { organizationSchema, websiteSchema, websiteId, organizationId } from '../data/schema';
+
+const title = 'Contact webdeveloper in Duffel | Craft and Code';
+const description =
+  'Contacteer Craft and Code, webdeveloper in Duffel, voor een website op maat, Craft CMS, web applicaties of API-koppelingen. Geen verkooppraat, wel een eerlijke inschatting.';
+const url = new URL(Astro.url.pathname, Astro.site).href;
+
+const schema = [
+  organizationSchema(),
+  websiteSchema(),
+  {
+    '@type': 'ContactPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: title,
+    description,
+    isPartOf: { '@id': websiteId },
+    about: { '@id': organizationId },
+    inLanguage: 'nl-BE',
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Contact', item: url },
+    ],
+  },
+];
+
+const inputClass =
+  'mt-2 block w-full rounded-2xl bg-sand px-4 py-3 text-navy ring-1 ring-navy/10 placeholder:text-navy/40 transition focus:bg-white focus:outline-none focus:ring-2 focus:ring-leaf';
+const labelClass = 'block text-sm font-semibold';
+---
+<Base title={title} description={description} schema={schema}>
+
+  <!-- HERO / H1 -->
+  <section id="home" class="scroll-mt-32 px-4 pb-12 pt-32 sm:px-6 sm:pt-44">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">Contact</p>
+
+      <h1 class="mt-5 text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl">
+        Contact met Ward Kennes, webdeveloper in Duffel
+      </h1>
+
+      <p class="mt-6 text-lg leading-relaxed text-navy/70">
+        Vertel ons waar je zaak vandaag staat en waar je naartoe wil.
+        Geen verkoopgesprek, maar een nuchtere blik op wat een website, applicatie of koppeling voor jou kan opleveren.
+      </p>
+
+      <p class="mt-4 leading-relaxed text-navy/70">
+        Je krijgt een eerlijke inschatting terug, ook als het antwoord is dat je iets beter niet laat bouwen.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORMULIER / H2 -->
+  <section id="contactformulier" class="scroll-mt-32 px-4 pb-20 sm:px-6" aria-labelledby="formulier-titel">
+    <div class="mx-auto grid max-w-6xl gap-4 lg:grid-cols-3">
+
+      <div class="rounded-[2rem] bg-white p-8 ring-1 ring-navy/5 sm:p-12 lg:col-span-2">
+        <h2 id="formulier-titel" class="text-2xl font-bold tracking-tight sm:text-3xl">Vraag een vrijblijvende inschatting voor je project</h2>
+        <p class="mt-3 leading-relaxed text-navy/70">
+          Een paar zinnen volstaan. We lezen elke aanvraag zelf en antwoorden persoonlijk. Velden met een * zijn verplicht.
+        </p>
+
+        <form id="contact-form" action={site.contactFormEndpoint || undefined} method="POST" class="mt-8 grid gap-6 sm:grid-cols-2" novalidate>
+          <input type="hidden" name="_subject" value="Nieuwe aanvraag via craftandcode.be">
+
+          <!-- Honeypot: hidden from people, bots tend to fill it in. -->
+          <div class="hidden" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div>
+            <label for="name" class={labelClass}>Naam *</label>
+            <input id="name" name="name" type="text" required autocomplete="name" class={inputClass}>
+          </div>
+
+          <div>
+            <label for="email" class={labelClass}>E-mailadres *</label>
+            <input id="email" name="email" type="email" required autocomplete="email" class={inputClass}>
+          </div>
+
+          <div>
+            <label for="company" class={labelClass}>Bedrijf</label>
+            <input id="company" name="company" type="text" autocomplete="organization" class={inputClass}>
+          </div>
+
+          <div>
+            <label for="phone" class={labelClass}>Telefoon</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" class={inputClass}>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="topic" class={labelClass}>Waarover gaat je vraag?</label>
+            <select id="topic" name="topic" class={inputClass}>
+              <option value="">Maak een keuze</option>
+              {services.map((s) => <option value={s.short}>{s.name}</option>)}
+              <option value="Iets anders">Iets anders</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="message" class={labelClass}>Je vraag *</label>
+            <textarea id="message" name="message" rows="6" required
+                      placeholder="Wat wil je bouwen, wat bestaat er al en wanneer moet het klaar zijn?"
+                      class={inputClass}></textarea>
+          </div>
+
+          <div class="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+            <p class="max-w-md text-sm leading-relaxed text-navy/60">
+              We gebruiken je gegevens enkel om je vraag te beantwoorden.
+            </p>
+            <button type="submit"
+                    class="inline-flex items-center justify-center rounded-full bg-navy px-7 py-4 text-sm font-semibold text-white transition hover:bg-navy-soft disabled:opacity-60">
+              Verstuur je aanvraag
+            </button>
+          </div>
+
+          <p id="form-status" role="status" aria-live="polite" class="hidden rounded-2xl px-5 py-4 text-sm sm:col-span-2"></p>
+        </form>
+      </div>
+
+      <aside class="rounded-[2rem] bg-white p-8 ring-1 ring-navy/5 sm:p-12" aria-labelledby="direct-titel">
+        <h2 id="direct-titel" class="text-lg font-semibold">Liever rechtstreeks mailen?</h2>
+        <p class="mt-2 leading-relaxed text-navy/70">Je mail komt rechtstreeks bij Ward terecht. Een bericht via LinkedIn kan ook.</p>
+
+        <ul class="mt-6 space-y-4 text-sm">
+          <li>
+            <a href={`mailto:${site.email}`} class="font-medium transition hover:text-leaf">{site.email}</a>
+          </li>
+          <li>
+            <a href={site.linkedin} target="_blank" rel="noopener" class="font-medium transition hover:text-leaf">Ward op LinkedIn</a>
+          </li>
+        </ul>
+
+        <h2 class="mt-10 text-lg font-semibold">Webdeveloper voor regio Duffel en Antwerpen</h2>
+        <p class="mt-2 leading-relaxed text-navy/70">
+          Vanuit Duffel, voor bedrijven in Antwerpen, Mechelen, Lier en Rumst. Verder weg werken we digitaal samen.
+        </p>
+
+        <div class="mt-10 border-t border-navy/10 pt-8">
+          <h2 class="text-lg font-semibold">Websites op maat met Craft CMS</h2>
+          <!-- Red logo on a light background, per https://craftcms.com/brand-resources -->
+          <img src="/logo-craft-cms.svg" alt="Craft CMS" width="220" height="55" loading="lazy"
+               class="mt-6 h-8 w-auto">
+          <p class="mt-6 leading-relaxed text-navy/70">
+            We bouwen websites met Craft CMS: een contentmodel op maat van je zaak en een beheeromgeving die je zelf vlot gebruikt.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <script define:vars={{ email: site.email }}>
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+  
+    const show = (text, ok) => {
+      status.textContent = text;
+      status.classList.remove('hidden', 'bg-leaf/15', 'bg-red-50', 'text-red-800');
+      status.classList.add(...(ok ? ['bg-leaf/15'] : ['bg-red-50', 'text-red-800']));
+    };
+  
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+  
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+  
+      if (!form.action || form.getAttribute('action') === null) {
+        show(`Het formulier is nog niet actief. Mail ons gerust op ${email}.`, false);
+        return;
+      }
+  
+      const button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+  
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (!response.ok) throw new Error(String(response.status));
+  
+        form.reset();
+        show('Bedankt, je aanvraag is verstuurd. Je krijgt zo snel mogelijk antwoord.', true);
+        (window.dataLayer = window.dataLayer || []).push({ event: 'contact_form_submit' });
+      } catch {
+        show(`Er ging iets mis bij het versturen. Probeer opnieuw of mail ons op ${email}.`, false);
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+
+</Base>

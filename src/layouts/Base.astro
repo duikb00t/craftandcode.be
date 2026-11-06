@@ -9,11 +9,13 @@ interface Props {
   description: string;
   ogDescription?: string;
   geoPlacename?: string;
+  /** Robots directive, e.g. 'noindex, follow' for unpublished pages */
+  robots?: string;
   /** Nodes for the JSON-LD @graph */
   schema?: Record<string, unknown>[];
 }
 
-const { title, description, ogDescription = description, geoPlacename = 'Duffel', schema = [] } = Astro.props;
+const { title, description, ogDescription = description, geoPlacename = 'Duffel', robots = 'index, follow, max-image-preview:large', schema = [] } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const jsonLd = { '@context': 'https://schema.org', '@graph': schema };
 ---
@@ -27,10 +29,18 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': schema };
   <title>{title}</title>
   <meta name="description" content={description}>
   <link rel="canonical" href={canonical}>
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content={robots}>
   <meta name="geo.region" content="BE-VAN">
   <meta name="geo.placename" content={geoPlacename}>
   <link rel="sitemap" href="/sitemap-index.xml">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Craft and Code">
+  <link rel="manifest" href="/site.webmanifest">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="nl_BE">

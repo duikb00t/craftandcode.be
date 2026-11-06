@@ -1,10 +1,12 @@
 ---
-// Links point to "/#section" so they also work from region pages.
+// Section links point to "/#section" so they also work from other pages.
 const nav = [
   { href: '/#home', label: 'Home' },
   { href: '/#diensten', label: 'Diensten' },
-  { href: '/#contact', label: 'Contact' },
+  { href: '/contact/', label: 'Contact' },
 ];
+
+const current = (href: string) => (href === Astro.url.pathname ? 'page' : undefined);
 ---
 <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6">
   <div class="mx-auto max-w-6xl">
@@ -16,12 +18,12 @@ const nav = [
 
       <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
         {nav.map((item) => (
-          <li><a href={item.href} class="nav-link transition hover:text-leaf">{item.label}</a></li>
+          <li><a href={item.href} aria-current={current(item.href)} class="nav-link transition hover:text-leaf">{item.label}</a></li>
         ))}
       </ul>
 
       <div class="flex items-center gap-2">
-        <a href="/#contact" class="hidden rounded-full bg-navy px-5 py-2.5 text-sm font-medium text-white transition hover:bg-navy-soft sm:inline-flex">
+        <a href="/contact/" class="hidden rounded-full bg-navy px-5 py-2.5 text-sm font-medium text-white transition hover:bg-navy-soft sm:inline-flex">
           Contacteer ons
         </a>
 
@@ -37,10 +39,10 @@ const nav = [
     <div id="mobile-menu" class="mt-2 hidden rounded-3xl bg-white p-4 shadow-lg shadow-navy/5 ring-1 ring-navy/5 md:hidden">
       <ul class="flex flex-col text-sm font-medium">
         {nav.map((item) => (
-          <li><a href={item.href} class="nav-link block rounded-2xl px-4 py-3 transition hover:bg-sand">{item.label}</a></li>
+          <li><a href={item.href} aria-current={current(item.href)} class="nav-link block rounded-2xl px-4 py-3 transition hover:bg-sand">{item.label}</a></li>
         ))}
       </ul>
-      <a href="/#contact" class="mt-2 block rounded-full bg-navy px-5 py-3 text-center text-sm font-medium text-white transition hover:bg-navy-soft">
+      <a href="/contact/" class="mt-2 block rounded-full bg-navy px-5 py-3 text-center text-sm font-medium text-white transition hover:bg-navy-soft">
         Contacteer ons
       </a>
     </div>

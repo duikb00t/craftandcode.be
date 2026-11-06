@@ -36,4 +36,4 @@ De prijs van een website hangt af van het aantal paginatypes, de functionaliteit
 
 ## Benieuwd wat het kost?
 
-Stuur een mail met wat je zaak doet en wat je website moet kunnen. [Neem contact op](#contact).
+Stuur een mail met wat je zaak doet en wat je website moet kunnen. [Neem contact op](/contact/).

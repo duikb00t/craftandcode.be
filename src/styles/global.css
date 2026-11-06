@@ -24,4 +24,5 @@
   * { transition-duration: 0.01ms !important; }
 }
 
-.nav-link.is-active { color: var(--color-leaf); }
+.nav-link.is-active,
+.nav-link[aria-current="page"] { color: var(--color-leaf); }

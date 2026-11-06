@@ -11,6 +11,9 @@ export const site = {
   linkedin: 'https://www.linkedin.com/in/wardkennes/',
   instagram: 'https://www.instagram.com/craftandcode_be/',
   gtmId: 'GTM-WK66RQQD',
+  // POST endpoint of the form service behind the contact form (static hosting, no own backend).
+  // Leave empty to show the mail fallback instead of sending.
+  contactFormEndpoint: 'https://formspree.io/f/mkjjelbl',
   cookieFirstSrc:
     'https://consent.cookiefirst.com/sites/craftandcode.be-c68ffa3a-7fb0-48cd-967d-e1a3696562f6/consent.js',
   address: {

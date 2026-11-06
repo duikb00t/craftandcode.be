@@ -36,4 +36,4 @@ Bij koppelingen en applicaties begint een goed project met het in kaart brengen 
 
 ## Plannen voor een koppeling of applicatie?
 
-Beschrijf kort welke systemen je gebruikt en wat je wil bereiken. [Neem contact op](#contact).
+Beschrijf kort welke systemen je gebruikt en wat je wil bereiken. [Neem contact op](/contact/).

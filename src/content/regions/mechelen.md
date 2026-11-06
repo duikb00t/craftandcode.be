@@ -50,4 +50,4 @@ Heb je al een website of applicatie die je wil laten overnemen of verbeteren? Da
 
 ## Een webdeveloper in Mechelen nodig?
 
-Stuur een mail met wat je wil bouwen. Je krijgt een eerlijke inschatting terug, opgesplitst per onderdeel, zodat je ziet waar het budget naartoe gaat. [Neem contact op](#contact).
+Stuur een mail met wat je wil bouwen. Je krijgt een eerlijke inschatting terug, opgesplitst per onderdeel, zodat je ziet waar het budget naartoe gaat. [Neem contact op](/contact/).
