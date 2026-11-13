@@ -1,0 +1,84 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { organizationSchema, websiteSchema, websiteId, organizationId } from '../../data/schema';
+import { getArticles, articlePath, formatDate, isoDate } from '../../data/kennisbank';
+
+const title = 'Kennisbank over websites, Craft CMS en AI | Craft and Code';
+const description =
+  'Heldere uitleg over websites, Craft CMS, SEO en AI, zonder vakjargon. Praktische artikels van webdeveloper Ward Kennes uit Duffel.';
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const articles = await getArticles();
+
+const schema = [
+  organizationSchema(),
+  websiteSchema(),
+  {
+    '@type': 'CollectionPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: title,
+    description,
+    isPartOf: { '@id': websiteId },
+    about: { '@id': organizationId },
+    inLanguage: 'nl-BE',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: articles.map((a, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: new URL(articlePath(a), site.url).href,
+        name: a.data.heading,
+      })),
+    },
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Kennisbank', item: url },
+    ],
+  },
+];
+---
+<Base title={title} description={description} schema={schema}>
+
+  <section id="home" class="scroll-mt-32 px-4 pb-12 pt-32 sm:px-6 sm:pt-44">
+    <div class="mx-auto max-w-3xl">
+      <nav aria-label="Kruimelpad" class="mb-6 text-sm text-navy/60">
+        <a href="/" class="transition hover:text-leaf">Home</a>
+        <span class="mx-2" aria-hidden="true">/</span>
+        <span aria-current="page">Kennisbank</span>
+      </nav>
+
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">Kennisbank</p>
+      <h1 class="mt-3 text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl">
+        Websites, Craft CMS en AI, helder uitgelegd
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-navy/70">
+        Wat betekent een nieuwe technologie voor jouw website, en moet je er iets mee? In de kennisbank leg ik het uit
+        in gewone taal: wat het is, wat het oplevert en waar je op moet letten.
+      </p>
+    </div>
+  </section>
+
+  <section class="px-4 pb-20 sm:px-6" aria-label="Artikels">
+    <div class="mx-auto grid max-w-3xl gap-4">
+      {articles.map((article) => (
+        <article class="group relative rounded-3xl bg-white p-8 ring-1 ring-navy/5 transition hover:ring-leaf/40">
+          <p class="text-xs font-semibold uppercase tracking-wider text-leaf">{article.data.category}</p>
+          <h2 class="mt-2 text-xl font-semibold leading-snug">
+            <a href={articlePath(article)} class="after:absolute after:inset-0 group-hover:text-leaf">
+              {article.data.heading}
+            </a>
+          </h2>
+          <p class="mt-3 leading-relaxed text-navy/70">{article.data.description}</p>
+          <p class="mt-4 text-sm text-navy/50">
+            <time datetime={isoDate(article.data.publishedAt)}>{formatDate(article.data.publishedAt)}</time>
+          </p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+</Base>

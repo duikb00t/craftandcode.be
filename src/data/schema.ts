@@ -31,7 +31,7 @@ export function organizationSchema() {
     geo: { '@type': 'GeoCoordinates', latitude: site.geo.latitude, longitude: site.geo.longitude },
     hasMap: site.google.mapsUrl,
     areaServed: areaServed.map((name) => ({ '@type': 'City', name })),
-    knowsAbout: ['Craft CMS', 'Webdevelopment', 'Maatwerk software', 'API-koppelingen', 'Web applicaties'],
+    knowsAbout: ['Craft CMS', 'Webdevelopment', 'Maatwerk software', 'API-koppelingen', 'Web applicaties', 'UX design', 'Webtoegankelijkheid', 'SEO', 'Copywriting', 'Model Context Protocol'],
     sameAs: [site.linkedin, site.instagram, site.google.mapsUrl],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

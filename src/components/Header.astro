@@ -3,10 +3,16 @@
 const nav = [
   { href: '/#home', label: 'Home' },
   { href: '/#diensten', label: 'Diensten' },
+  { href: '/kennisbank/', label: 'Kennisbank' },
   { href: '/contact/', label: 'Contact' },
 ];
 
-const current = (href: string) => (href === Astro.url.pathname ? 'page' : undefined);
+// Section pages also mark their children as current (e.g. /kennisbank/<article>/).
+const current = (href: string) =>
+  href.startsWith('/#') || href === '/' ? undefined
+  : Astro.url.pathname === href ? 'page'
+  : Astro.url.pathname.startsWith(href) ? 'true'
+  : undefined;
 ---
 <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6">
   <div class="mx-auto max-w-6xl">

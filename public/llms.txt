@@ -11,6 +11,14 @@ Craft and Code (Craft And Code CommV) werkt voor handelszaken, horeca, zelfstand
 - [API-koppelingen en integraties](https://craftandcode.be/#diensten): websites koppelen aan ERP, CRM of voorraadsysteem, zodat data op één plek onderhouden wordt.
 - [Social media campagnes](https://craftandcode.be/#diensten): lokale campagnes met tracking op binnenkomende aanvragen.
 
+Rond de website: onderhoud en optimalisatie, UX en UI design, content creatie en design, toegankelijkheid (WCAG), grafisch ontwerp, copywriting, en SEO en vindbaarheid in AI-assistenten.
+
+## Kennisbank
+
+- [Kennisbank](https://craftandcode.be/kennisbank/): uitleg in gewone taal over websites, Craft CMS, SEO en AI.
+- [Craft CMS 6 is in beta: wat verandert er voor jouw website?](https://craftandcode.be/kennisbank/craft-cms-6/): nieuwe functies, Laravel-basis, upgradepad en planning naar de stabiele release.
+- [Je Craft CMS website kan nu met AI praten: wat is MCP?](https://craftandcode.be/kennisbank/craft-cms-ai-mcp/): MCP-plugins voor Craft CMS, toepassingen en aandachtspunten rond rechten en veiligheid.
+
 ## Werkgebied
 
 - [Duffel](https://craftandcode.be/): vestigingsplaats

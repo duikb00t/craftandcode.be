@@ -90,3 +90,42 @@ export const faq = [
     a: 'Dat kan. We starten met een technische doorlichting van de code, de hosting en het CMS. Daarna weet je of doorbouwen realistisch is of dat herbouwen op termijn minder kost.',
   },
 ];
+
+// "Website diensten" section on the homepage: everything around the website itself.
+export const websiteServices = [
+  {
+    name: 'Onderhoud en optimalisatie',
+    text: 'Updates, beveiliging en back-ups, en een site die sneller en beter wordt in plaats van te verouderen.',
+    icon: 'M10.3 4.3a1.7 1.7 0 0 1 3.4 0 1.7 1.7 0 0 0 2.6 1 1.7 1.7 0 0 1 2.4 2.4 1.7 1.7 0 0 0 1 2.6 1.7 1.7 0 0 1 0 3.4 1.7 1.7 0 0 0-1 2.6 1.7 1.7 0 0 1-2.4 2.4 1.7 1.7 0 0 0-2.6 1 1.7 1.7 0 0 1-3.4 0 1.7 1.7 0 0 0-2.6-1 1.7 1.7 0 0 1-2.4-2.4 1.7 1.7 0 0 0-1-2.6 1.7 1.7 0 0 1 0-3.4 1.7 1.7 0 0 0 1-2.6 1.7 1.7 0 0 1 2.4-2.4 1.7 1.7 0 0 0 2.6-1zM15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z',
+  },
+  {
+    name: 'UX en UI design',
+    text: 'Een structuur en interface waarin bezoekers vinden wat ze zoeken en makkelijk de stap zetten naar contact of aankoop.',
+    icon: 'M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5zm0 9a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-5zm12 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-5z',
+  },
+  {
+    name: 'Content creatie en design',
+    text: 'Pagina\'s, visuals en opbouw die samen een duidelijk verhaal vertellen, klaar om zelf verder aan te vullen.',
+    icon: 'M4 16l4.6-4.6a2 2 0 0 1 2.8 0L16 16m-2-2l1.6-1.6a2 2 0 0 1 2.8 0L20 14M14 8h.01M6 20h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z',
+  },
+  {
+    name: 'Toegankelijkheid',
+    text: 'Een website die ook werkt met toetsenbord, schermlezer en voldoende contrast, getoetst aan de WCAG-richtlijnen.',
+    icon: 'M12 4.5a1.5 1.5 0 1 0 0 .01M5 8l7 1.5L19 8M12 9.5V14m0 0l-3 6m3-6l3 6',
+  },
+  {
+    name: 'Grafisch ontwerp',
+    text: 'Logo\'s, huisstijlelementen en visuals die online en offline hetzelfde merk uitstralen.',
+    icon: 'M7 21a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12a4 4 0 0 1-4 4zm0 0h12a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2.3M11 7.3l1.7-1.6a2 2 0 0 1 2.8 0l2.8 2.8a2 2 0 0 1 0 2.8L11 18.6M7 17h.01',
+  },
+  {
+    name: 'Copywriting',
+    text: 'Teksten in begrijpelijke taal die uitleggen wat je doet en voor wie, geschreven voor mensen en vindbaar voor zoekmachines.',
+    icon: 'M11 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5m-1.4-9.4a2 2 0 1 1 2.8 2.8L11.8 15H9v-2.8l8.6-8.6z',
+  },
+  {
+    name: 'SEO en vindbaarheid in AI',
+    text: 'Technische SEO, gestructureerde data en content die gevonden wordt in Google en geciteerd door AI-assistenten zoals ChatGPT.',
+    icon: 'M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z',
+  },
+];
