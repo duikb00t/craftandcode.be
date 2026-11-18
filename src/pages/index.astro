@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import GoogleRating from '../components/GoogleRating.astro';
-import { site, services, websiteServices, workArea, faq } from '../data/site';
+import { site, services, websiteServices, workArea, faq, clients } from '../data/site';
 import { getArticles, articlePath, kennisbankPath } from '../data/kennisbank';
 import { organizationSchema, websiteSchema, websiteId, organizationId } from '../data/schema';
 
@@ -124,7 +124,7 @@ const schema = [
             </p>
             <a href="/contact/"
                class="mt-8 inline-flex items-center rounded-full bg-leaf px-6 py-3 text-sm font-semibold text-navy-deep transition hover:bg-leaf-dark">
-              Bespreek je website
+              Vraag een inschatting
             </a>
           </div>
 
@@ -142,6 +142,79 @@ const schema = [
             ))}
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KLANTEN / H2 -->
+  <section id="klanten" class="scroll-mt-32 px-4 py-16 sm:px-6" aria-labelledby="klanten-titel">
+    <div class="mx-auto max-w-6xl">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">Klanten</p>
+        <h2 id="klanten-titel" class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+          Een greep uit onze klanten
+        </h2>
+        <p class="mt-4 leading-relaxed text-navy/70">
+          Van architectenbureau en drukkerij tot vastgoed: een selectie van de bedrijven uit regio Antwerpen en Mechelen waarvoor Craft and Code werkt.
+        </p>
+      </div>
+
+      <!-- Lines are the 1px gaps showing the grid background, so they never double up or shift. -->
+      <div class="overflow-hidden rounded-3xl ring-1 ring-navy/5">
+        <ul class="grid grid-cols-2 gap-px bg-navy/5 md:grid-cols-4">
+          {clients.map((client) => (
+            <li class="group flex aspect-[3/2] items-center justify-center bg-white p-6 sm:p-10">
+              {'mono' in client ? (
+                // Hand-made mono version by default, colour version fades in on hover.
+                <span class="relative inline-flex">
+                  <img
+                    src={client.mono}
+                    alt={`Logo ${client.name}`}
+                    width={client.width}
+                    height={client.height}
+                    loading="lazy"
+                    decoding="async"
+                    class:list={['h-auto w-auto max-w-full object-contain opacity-90 transition duration-300 group-hover:opacity-0', client.fit]}
+                  />
+                  <img
+                    src={client.logo}
+                    alt=""
+                    aria-hidden="true"
+                    width={client.width}
+                    height={client.height}
+                    loading="lazy"
+                    decoding="async"
+                    class="absolute inset-0 h-full w-full object-contain opacity-0 transition duration-300 group-hover:opacity-100"
+                  />
+                </span>
+              ) : (
+                <img
+                  src={client.logo}
+                  alt={`Logo ${client.name}`}
+                  width={client.width}
+                  height={client.height}
+                  loading="lazy"
+                  decoding="async"
+                  class:list={[
+                    'h-auto w-auto max-w-full object-contain mix-blend-multiply grayscale opacity-90 transition duration-300 group-hover:opacity-100 group-hover:grayscale-0',
+                    client.fit,
+                  ]}
+                />
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="mx-auto mt-12 max-w-2xl text-center">
+        <p class="text-lg font-semibold">Benieuwd wat we voor jouw bedrijf kunnen bouwen?</p>
+        <p class="mt-2 leading-relaxed text-navy/70">
+          Laten we samenzitten en je project bespreken, bij jou ter plaatse of online.
+        </p>
+        <a href="/contact/"
+           class="mt-6 inline-flex items-center justify-center rounded-full bg-navy px-7 py-4 text-sm font-semibold text-white transition hover:bg-navy-soft">
+          Vraag een inschatting
+        </a>
       </div>
     </div>
   </section>
