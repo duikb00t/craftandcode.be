@@ -129,3 +129,18 @@ export const websiteServices = [
     icon: 'M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z',
   },
 ];
+
+// Client logos shown on the home page. Files live in /public/clients.
+// width/height are the intrinsic dimensions (prevents layout shift).
+// `mono` (optional): hand-made black-and-white version, for logos whose colours vanish under a grayscale filter.
+// `fit` evens out the optical size: wide logos get less height, compact ones more.
+export const clients = [
+  { name: 'Bulkmans veranda\'s', logo: '/clients/bulkmans-verandas.svg', width: 160, height: 114, fit: 'max-h-16' },
+  { name: 'Imprenta Print Professionals', logo: '/clients/imprenta-logo.png', width: 367, height: 96, fit: 'max-h-10' },
+  { name: 'XL Reklame', logo: '/clients/xlreklame-logo.png', width: 212, height: 212, fit: 'max-h-16' },
+  { name: 'Straalstudio', logo: '/clients/straalstudio_logo.svg', width: 294, height: 172, fit: 'max-h-14' },
+  { name: 'Vloerwerken Ceuppens', logo: '/clients/vloerwerken-ceuppens-logo.svg', width: 290, height: 78, fit: 'max-h-11' },
+  { name: 'Verhoeven Architectenbureau', logo: '/clients/verhoeven-architectenbureau-logo.png', width: 333, height: 180, fit: 'max-h-14' },
+  { name: 'Morel & Co Vastgoedprojecten', logo: '/clients/morelandco-logo.svg', mono: '/clients/morelandco-logo-mono.svg', width: 156, height: 121, fit: 'max-h-16' },
+  { name: 'CAR Antenne 3000 vzw', logo: '/clients/antenne3000-logo.avif', width: 480, height: 525, fit: 'max-h-16 sm:max-h-20' },
+] as const;

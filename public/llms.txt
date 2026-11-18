@@ -13,6 +13,10 @@ Craft and Code (Craft And Code CommV) werkt voor handelszaken, horeca, zelfstand
 
 Rond de website: onderhoud en optimalisatie, UX en UI design, content creatie en design, toegankelijkheid (WCAG), grafisch ontwerp, copywriting, en SEO en vindbaarheid in AI-assistenten.
 
+## Klanten
+
+- [Klanten](https://craftandcode.be/#klanten): onder meer Bulkmans veranda's, Imprenta Print Professionals, XL Reklame, Straalstudio, Vloerwerken Ceuppens, Verhoeven Architectenbureau, Morel & Co Vastgoedprojecten en CAR Antenne 3000 vzw.
+
 ## Kennisbank
 
 - [Kennisbank](https://craftandcode.be/kennisbank/): uitleg in gewone taal over websites, Craft CMS, SEO en AI.
