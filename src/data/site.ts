@@ -6,7 +6,9 @@ export const site = {
   alternateName: 'Craft & Code',
   url: 'https://craftandcode.be',
   email: 'info@craftandcode.be',
-  logo: 'https://i.imgur.com/9k4m2Og.png',
+  logo: 'https://craftandcode.be/logo.png',
+  // Social share image (1200x630), used for og:image / twitter:image.
+  ogImage: 'https://craftandcode.be/og-image.png',
   founder: 'Ward Kennes',
   linkedin: 'https://www.linkedin.com/in/wardkennes/',
   instagram: 'https://www.instagram.com/craftandcode_be/',

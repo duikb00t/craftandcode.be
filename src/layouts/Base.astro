@@ -48,8 +48,12 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': schema };
   <meta property="og:title" content={title}>
   <meta property="og:description" content={ogDescription}>
   <meta property="og:url" content={canonical}>
-  <meta property="og:image" content={site.logo}>
+  <meta property="og:image" content={site.ogImage}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Craft and Code, websites op maat, web applicaties en API-koppelingen in Duffel">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content={site.ogImage}>
 
   <!-- Consent & tracking (unchanged) -->
   <script is:inline src={site.cookieFirstSrc}></script>
@@ -64,9 +68,9 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': schema };
   <!-- Structured data -->
   {schema.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Self-hosted Poppins (see global.css); preload the weights used above the fold -->
+  <link rel="preload" href="/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/poppins-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body class="min-h-full bg-sand font-sans text-navy antialiased">
